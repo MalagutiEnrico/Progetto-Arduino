@@ -34,7 +34,7 @@ int luce;                                                           //variabile 
 
 void segnalaDistanza(long distanza){
   lcd.setCursor(0, 1);
-  if(distanza>10){                                                   //se la distanza >=5, allora non accade nulla
+  if(distanza>10){                                                   //se la distanza >=10, allora non accade nulla
     lcd.print("Via Libera          ");
     digitalWrite(pinBuzzer, LOW);
   }
