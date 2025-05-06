@@ -1,0 +1,157 @@
+#immagini{
+    text-align: center;
+}
+/*IMMAGINI DEI COMPONENTI, PRESENTI NELLA PAGINA materiali_e_componenti.hmtl*/
+#servomotoreimmagine{
+    height: 200px;
+    width: 200px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+    margin: auto 0 auto auto;
+}
+
+#sensoredistanzaimmagine{
+    height: 200px;
+    width: 250px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+}
+
+#schermoLCDimmagine{
+    height: 200px;
+    width: 280px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+}
+
+#arduinoimmagine{
+    height: 200px;
+    width: 300px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+}
+
+#joystickimmagine{
+    height: 250px;
+    width: 280px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+}
+
+#buzzerimmagine{
+    height: 200px;
+    width: 250px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5xp 5px 5px;
+}
+
+#fotoresistoreimmagine{
+    height: 200px;
+    width: 280px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5px 5px 5px;
+}
+
+#protosheldimmagine{
+    height: 220px;
+    width: 280px;
+    border: solid 1px rgb(200,200,200);
+    padding: 5px 5px 5px 5px
+}
+
+/*IMMAGINI DELLA REALIZZAZIONE, PRESENTI NELLA PAGINA realizzazione.hmtl*/
+
+#immaginerealizzazione1{
+    width: 350px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+#immaginerealizzazione2{
+    width: 350px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+#immaginerealizzazione3{
+    width: 330px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+/*IMMAGINI DEL CODICE, PRESENTI NELLA PAGINA codice.hmtl*/
+
+#immaginelibrerie{
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginevariabili{
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginesegnaladistanza{
+    width: 400px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginestampadistanza{
+    width: 400px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginefunzionimotori{
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginerilevaLuce{
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immaginesetup{
+    width: 350px;
+    height: 180px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immagineloop{
+    width: 400px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    float: left; 
+}
+
+#immagineledaccensione{
+    width: 400px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    float: left; 
+}

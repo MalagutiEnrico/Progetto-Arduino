@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Codice</title>
+        <link href="../css/stile_testo_e_paragrafi.css" rel="stylesheet" type="text/css">
+        <link href="../css/stile_immagini.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <h3>Il nostro progetto Arduino</h3>
+            <br>
+            <h1>Codice</h1>
+        </div>
+        <div id="nav">
+            <br>
+            <a href="../Progetto_arduino_sito_web.html" style="color: white">Home Page</a>
+            <a href="./Codice.html" style="color:white">Codice</a>
+            <a href="./progettazione.html" style="color:white">Progettazione</a>
+            <a href="./realizzazione.html" style="color:white">Realizzazione</a>
+            <a href="./materiale_e_componenti.html" style="color:white">Materiali e componenti</a>
+            <a href="https://github.com/MalagutiEnrico/Progetto-Arduino.git" style="color:white">Repository github del progetto</a>
+        </div>
+        <div id="testo">
+            <p>Il codice che abbiamo scritto è suddiviso in funzioni, per facilitarne la comprensione e anche perché alcune funzioni vengono usate in zone diverse codice.</p>
+            <h3 id="titolodiparagrafo">Inclusione librerie e #define</h3>
+            <img src="../immagini_progetto/codice/librerie.png" id="immaginelibrerie" alt="parte di codice delle librerie">
+            <p>Questa parte del codice include le librerie utilizzate, in particolare: </p>
+            <p><b>Servo.h:</b> utilizzata per gestire il servomotore.</p>
+            <p><b>SC-HR04.h:</b> utilizzata per il sensore ad ultrasuoni SC-HR04</p>
+            <p><b>LiquidCrystal_I2C.h:</b> utilizzata per lo schermo LCD</p>
+            <p>Successivamente, sono presenti tutti i <code>#define</code>, necessari per assegnare un nome ai pin digitali ed analogici dell'arduino e per rendere chiaro il codice.</p>
+            <p>In particolare:</p>
+            <p><b>pinTrig e pinEcho</b>, necessari per il sensore ad ultrasuoni;</p>
+            <p><b>pinServo</b>, che comanda il servomotore;</p>
+            <p><b>pinBottoneJoystick</b>, che rileva le pressioni del bottone integrato nel joystick;</p>
+            <p><b>pinBuzzer</b>, che comanda il buzzer presente nel progetto;</p>
+            <p><b>pinLed</b>, che gestisce l'accensione o lo spegnimento del led;</p>
+            <p><b>Joystick</b>, che gestisce la porta analogica che rileva la posizine del joystick analogico;</p>
+            <p><b>fotoresistore</b>, che gestisce la porta analogica a cui è collegato il fotoresistore.</p>
+            <br />
+            <h3 id="titolodiparagrafo">Dichiarazione variabili</h3>
+            <img src="../immagini_progetto/codice/variabili.png" id="immaginevariabili" alt="immagine delle variabili">
+            <p>In questa parte di codice vengono dichiarate le variabili che verranno usate nel programma e vengono inizializzati i dispositivi utilizzati.</p>
+            <p>Con la funzione <code>LiquidCrystal_I2C lcd(0x27, 16, 2)</code> viene inizializzato lo schermo LCD</p>
+            <p>Con la funzione <code>SR04 sr04 = SR04(pinEcho, PinTrig)</code>  viene inizializzato il sensore ad ultrasuoni</p>
+            <p>Con la funzione <code>Servo servo</code> viene inizializzato il servomotore</p>
+            <p>Le variabili sono quelle utilizzate nel programma e comprendono contatori(come alternativa al <code>delay</code>), indici di posizione per servomotore e distanza rilevata dal sensore ad ultrasuoni.</p>
+            <p>La variabile luce salva al suo interno la luminosità della stanza.</p>
+            <br>
+            <h3 id="titolodiparagrafo">Funzioni di stampa su LCD</h3>
+            <img src="../immagini_progetto/codice/segnaladistanza.png" id="immaginesegnaladistanza" alt="immagine funzione che comunica la distanza">
+            <p>Questa funzione, in base alla distanza rilevata dal sensore, stampa a video due messaggi: se la distanza è minore di 10cm, stampa il messaggio "Ostacolo vicino" e accende il buzzer; altrimenti stampa "Via Libera" e spegne il buzzer.</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="../immagini_progetto/codice/stampadistanza.png" id="immaginestampadistanza" alt="immagine funzione ce stampa le informazioni su LCD">
+            <p>Questa funzione stampa le informazioni su LCD; stampa la distanza rilevata ed in base ad essa un messaggio; stampa inoltre se il motore è in modalità manuale o automatica.</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h3 id="titolodiparagrafo">Funzioni di controllo del Motore</h3>
+            <img src="../immagini_progetto/codice/funzionimotori.png" id="immaginefunzionimotori" alt="immagine delle funzioni che controllano i motori">
+            <p>Le due funzioni nell'immagine gestiscono il movimento del servomotore: la prima lo muove in maniera automatica, la seconda invece lo aziona in base al joystick analogico.</p>
+            <br>
+            <p>La prima funzione lo muove in maniera automatica, ovvero lo fa ruotare di 180° e poi lo fa ritornare in posizione i partenza. Il servo viene girato di un grado ogni 15 millisecondi. Quando l'angolo arriva o a 180 o a 0 gradi, viene invertito per invertire il senso di rotazione.</p>
+            <br><br>
+            <p>La seconda funzione, invece, legge il valore restutito dal joystick analogico e, dopo averlo trasformato in un valore tra 0 e 180, lo invia al servo, che ruoterà sull'angolo indicato.</p>
+            <br>
+            <h3 id="titolodiparagrafo">Funzione rilevaLuce</h3>
+            <img src="../immagini_progetto/codice/rilevaluce.png" id="immaginerilevaLuce" alt="immagine funzione che rileva la luce">
+            <p>Questa funzione rileva la luce presente nella stanza. Se il valore è al di sotto di una certa soglia, allora accende un led bianco.</p>
+            <p>La funzione <code>luce = map(analogRead(fotoresistore), 0, 1023, 0, 100)</code> rileva il valore dal fotoresistore e lo converte in un range da 0 a 100.</p>
+            <br><br><br><br><br><br><br>
+            <h3 id="titolodiparagrafo">Funzione attivaLedAccensione</h3>
+            <img src="../immagini_progetto/codice/attivaledaccensione.png" id="immagineledaccensione">
+            <p>Questa funzione accende e spegne il led ad intervallo di 1 secondo. Viene eseguita all'accensione della scheda.</p>
+            <br><br><br><br><br><br><br><br><br>
+            <h3 id="titolodiparagrafo">Funzione Setup</h3>
+            <img src="../immagini_progetto/codice/setup.png" id="immaginesetup" alt="immagine della funzione setup">
+            <p>La funzione setup inizializza la scheda elettronica appena viene connessa alla corrente. Le prime tre funzioni inizializzano lo schermo LCD.</p>
+            <p>Le due funzioni <code>pinMode</code> impostano i pin dell'arduino in Input o in Output. Poi viene attivata la funzione attivaLedAccensione.</p>
+            <p>La funzione <code>servo.attach(pinServo)</code> serve ad impostare il pin con cui il servomotore viene attaccatto alla scheda Arduino.</p>
+            <br><br><br>
+            <h3 id="titolodiparagrafo">Funzione Loop</h3>
+            <img src="../immagini_progetto/codice/loop.png" id="immagineloop">
+            <p>La funzione loop è la funzione che viene eseguita dall'arduino finchè è alimentato dalla corrente. La prima parte gestisce il movimento del servomotore in base alla pressione del pulsante; la seconda rileva la quantità di luce nella stanza.</p>
+        </div>
+    </body>
+</html>

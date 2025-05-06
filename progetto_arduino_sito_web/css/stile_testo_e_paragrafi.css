@@ -1,0 +1,57 @@
+body{
+    background-color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h3{
+    color: white;
+}
+
+p{
+    text-align: center;
+}
+
+#titolodiparagrafo{
+    text-align: center;
+    color:black
+}
+
+#header{
+    width: 90%;
+    height: 150px;
+    text-align: center;
+    margin: 0px auto;
+    background-color: #54AEDB;
+}
+
+#nav{
+    width: 90%;
+    height: 50px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #54AEDB;
+}
+
+#content, #testo{
+    text-align: left;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#immagine{
+    background-color: white;
+    text-align:center;
+}
+
+#footer{
+    background-color: #54AEDB;
+    margin: 0px auto;
+    height: 200px;
+    text-align: center;
+    width:100%;
+}
+
+#paragrafoFooter{
+    color: white;
+    font-size: 13px;
+}
